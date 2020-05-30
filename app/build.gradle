@@ -13,13 +13,14 @@ android {
     }
     defaultConfig {
         applicationId "com.bih.nic.in.visheshsahayata"
-        minSdkVersion 18
+        minSdkVersion 19
         targetSdkVersion 28
         versionCode 1
         versionName "2.05"
         multiDexEnabled true
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         useLibrary 'org.apache.http.legacy'
+        vectorDrawables.useSupportLibrary = true
     }
     buildTypes {
         release {
