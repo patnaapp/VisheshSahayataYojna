@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+
     tools:context=".activity.VerifyPhoneActivity">
 
     <include
@@ -102,16 +102,48 @@
                             android:hint="आधार संख्या"
                             android:inputType="number" />
                     </android.support.design.widget.TextInputLayout>
-                    <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
-                        android:id="@+id/sp_state"
+<!--                    <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner-->
+<!--                        android:id="@+id/sp_state"-->
 
-                        android:layout_width="match_parent"
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:hint="आप अभी किस राज्य में है ?"-->
+<!--                        android:layout_marginTop="16dp"-->
+<!--                        android:drawableLeft="@drawable/district"-->
+<!--                        android:textColorHint="#05ab9a"-->
+<!--                        app:met_floatingLabel="normal" />-->
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-                        android:hint="आप अभी किस राज्य में है ?"
-                        android:layout_marginTop="16dp"
-                        android:drawableLeft="@drawable/district"
-                        android:textColorHint="#05ab9a"
-                        app:met_floatingLabel="normal" />
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="8dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="5dp">
+
+                        <TextView
+                            android:id="@+id/tv_curstate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="आप अभी किस राज्य में है ?"
+                            android:textColor="#000000"
+                            android:textStyle="bold" />
+
+                        <Spinner
+                            android:id="@+id/sp_state"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:imeOptions="actionUnspecified"
+                            android:paddingRight="20dp"
+                            android:textAppearance="?android:textAppearanceSmall"
+                            android:textColor="#43D305" />
+
+
+
+                    </LinearLayout>
 
                     <android.support.design.widget.TextInputLayout
                         android:layout_width="match_parent"
@@ -712,7 +744,7 @@
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:elevation="4dp"
-                android:src="@drawable/biharlogo"
+                android:src="@drawable/indian_gov"
                 android:layout_alignTop="@+id/login_title"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="32dp" />
@@ -742,7 +774,7 @@
 
                 <LinearLayout
                     android:padding="12dp"
-                    android:visibility="visible"
+                    android:visibility="gone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"

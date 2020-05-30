@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Mukhyamantri Vishesh Sahayat Yojana,Bihar</string>
+    <string name="app_name">Vishesh Sahayat Yojana</string>
     <string name="update">Update</string>
     <string name="ok">OK</string>
     <string name="wrong_device_text">This device is not registered in your account !</string>

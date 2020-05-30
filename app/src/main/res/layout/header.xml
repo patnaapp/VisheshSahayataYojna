@@ -21,7 +21,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="मुख्यमंत्री विशेष सहायता योजना,बिहार"
+        android:text="मुख्यमंत्री विशेष सहायता योजना"
         android:gravity="center_horizontal"
         android:textSize="15sp"
         android:textStyle="bold"
@@ -39,6 +39,6 @@
         android:layout_marginTop="5dp"
         android:scaleType="fitXY"
         android:layout_marginLeft="20dp"
-        android:src="@drawable/biharlogo" />
+        android:src="@drawable/indian_gov" />
 
 </RelativeLayout>

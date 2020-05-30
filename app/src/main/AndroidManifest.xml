@@ -30,10 +30,10 @@
         android:name="android.support.multidex.MultiDexApplication"
         android:allowBackup="true"
         android:hardwareAccelerated="false"
-        android:icon="@drawable/biharlogo"
+        android:icon="@drawable/indian_gov"
         android:label="@string/app_name"
         android:largeHeap="true"
-        android:roundIcon="@drawable/biharlogo"
+        android:roundIcon="@drawable/indian_gov"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">

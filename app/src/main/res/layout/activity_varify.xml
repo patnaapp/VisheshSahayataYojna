@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+
     tools:context="com.bih.nic.in.visheshsahayata.activity.VarifyActivity">
 
 
@@ -188,9 +188,6 @@
 
 
                         </LinearLayout>
-
-
-
 
                         <LinearLayout
                             android:layout_width="fill_parent"
@@ -691,7 +688,7 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:elevation="4dp"
-                android:src="@drawable/biharlogo"
+                android:src="@drawable/indian_gov"
                 android:background="@drawable/circular_shape_white"
                 android:layout_alignTop="@+id/login_title"
                 android:layout_centerHorizontal="true"

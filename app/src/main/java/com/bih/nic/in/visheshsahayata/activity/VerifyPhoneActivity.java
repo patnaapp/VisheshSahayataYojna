@@ -31,6 +31,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -71,7 +72,7 @@ public class VerifyPhoneActivity extends AppCompatActivity {
     RelativeLayout rl_declaration;
     EditText et_ben_location;
     int ThumbnailSize =500;
-    MaterialBetterSpinner sp_state;
+    Spinner sp_state;
     String showmobile="";
     TextView tv_auth_mob;
     CheckBox cb_confirm;
@@ -109,7 +110,7 @@ public class VerifyPhoneActivity extends AppCompatActivity {
         et_verify_otp_Number = (EditText)findViewById(R.id.et_verify_otp_Number);
         et_ben_location = (EditText)findViewById(R.id.et_ben_location);
         et_Confirm_Password = (EditText)findViewById(R.id.et_Confirm_Password);
-        sp_state = (MaterialBetterSpinner)findViewById(R.id.sp_state);
+        sp_state = (Spinner) findViewById(R.id.sp_state);
         rel_selfie = (RelativeLayout) findViewById(R.id.rel_selfie);
         img_pic1 = (ImageView) findViewById(R.id.img_pic1);
         img_pic2 = (ImageView) findViewById(R.id.img_pic2);
@@ -176,23 +177,52 @@ public class VerifyPhoneActivity extends AppCompatActivity {
             }
         });
 
-        sp_state.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Log.e("arg2",""+position);
-                if (position >= 0) {
+//        sp_state.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+//                Log.e("arg2",""+position);
+//                if (position >= 0) {
+//
+//                    State district = StateList.get(position);
+//                    StateCode = district.getStateCode();
+//                    StateName = district.getStateName();
+//
+//
+//                } else {
+//                    StateCode = "";
+//                    StateName = "";
+//
+//                }
+//            }
+//        });
 
-                    State district = StateList.get(position);
+
+        sp_state.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                // TODO Auto-generated method stub
+                int pos = position;
+                if (pos > 0) {
+                    State district = StateList.get(position-1);
                     StateCode = district.getStateCode();
                     StateName = district.getStateName();
 
-
-                } else {
+                }
+                else {
                     StateCode = "";
                     StateName = "";
 
                 }
+
             }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                // TODO Auto-generated method stub
+
+            }
+
         });
 
         getIntentData();
@@ -838,7 +868,7 @@ public class VerifyPhoneActivity extends AppCompatActivity {
 
         StateList = localDBHelper.getStateLocal();
         stateNameArray = new ArrayList<String>();
-        //districtNameArray.add("-Select District-");
+        stateNameArray.add("-राज्य का नाम-");
         int i = 1;
         for (State district : StateList) {
             stateNameArray.add(district.getStateName());
