@@ -4,19 +4,64 @@
     android:layout_height="match_parent"
     android:background="@color/white">
 
+<!--    <LinearLayout-->
+<!--        android:visibility="visible"-->
+<!--        android:layout_marginTop="40dp"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:weightSum="2">-->
+
+<!--        <ImageView-->
+<!--            android:layout_gravity="center_vertical"-->
+<!--            android:layout_weight="1"-->
+<!--            android:id="@+id/iv_dgtl"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="40dp"-->
+<!--            android:src="@drawable/digital_india"/>-->
+
+<!--        <ImageView-->
+
+<!--            android:layout_gravity="center_vertical"-->
+<!--            android:layout_weight="1"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="20dp"-->
+<!--            android:src="@drawable/nic3"/>-->
+<!--    </LinearLayout>-->
+
+    <ImageView
+        android:id="@+id/iv_dgtl1"
+        android:layout_marginTop="40dp"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:src="@drawable/digital_india"
+        android:layout_centerHorizontal="true"/>
+
     <RelativeLayout
+        android:id="@+id/rl_centre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         >
 
+        <TextView
+            android:id="@+id/textView211"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="भारत सरकार"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/holo_red_dark"
+            android:textSize="18dp"
+            android:textStyle="normal" />
+
         <ImageView
+            android:layout_margin="10dp"
+            android:layout_below="@+id/textView211"
             android:id="@+id/frame1"
             android:layout_width="140dp"
             android:layout_height="130dp"
-            android:layout_marginBottom="30dp"
             android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
             android:background="@drawable/indian_gov"
             >
         </ImageView>
@@ -26,20 +71,8 @@
             android:id="@+id/ll11"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
             android:orientation="vertical"
             android:gravity="center_horizontal">
-
-            <TextView
-                android:id="@+id/textView211"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="भारत सरकार"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textColor="@color/colorPrimary"
-                android:textSize="24dp"
-                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textView3"
@@ -48,35 +81,46 @@
                 android:gravity="center"
                 android:text="विशेष सहायता योजना"
                 android:textColor="@color/colorPrimary"
-                android:textSize="18dp"
-                android:textStyle="bold" />
+                android:textSize="17dp"
+                android:textStyle="normal" />
 
+            <TextView
+                android:id="@+id/tv_nic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="श्रम और रोजगार मंत्रालय"
+                android:textColor="@color/black"
+                android:textSize="13dp"
+                android:textStyle="normal" />
         </LinearLayout>
-
-        <ProgressBar
-            android:visibility="gone"
-            android:id="@+id/progress1"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:secondaryProgress="100"
-            android:secondaryProgressTint="@color/holo_blue_light"
-
-            />
-
     </RelativeLayout>
 
+    <ProgressBar
+        android:layout_margin="12dp"
+        android:layout_below="@+id/rl_centre"
+        android:layout_centerHorizontal="true"
+        android:visibility="visible"
+        android:id="@+id/progress1"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:secondaryProgress="100"
+        android:secondaryProgressTint="@color/holo_blue_light"/>
 
+    <ImageView
+        android:layout_marginBottom="8dp"
+        android:layout_width="110dp"
+        android:layout_height="20dp"
+        android:src="@drawable/nic3"
+        android:layout_above="@+id/iv_footer"
+        android:layout_centerHorizontal="true"/>
 
-
-
-
-    <include
-        android:id="@+id/footer"
-        android:visibility="gone"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+    <ImageView
+        android:id="@+id/iv_footer"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
         android:layout_alignParentBottom="true"
+        android:src="@drawable/footer"/>
 
-        layout="@layout/footer" />
 
 </RelativeLayout>
