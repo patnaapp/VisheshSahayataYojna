@@ -338,25 +338,9 @@
                                     android:imeOptions="actionUnspecified"
                                     android:paddingRight="20dp"
                                     android:textAppearance="?android:textAppearanceSmall"
-                                    android:textColor="#43D305" />
-                            </LinearLayout>
-                            <!--                        <android.support.design.widget.TextInputLayout-->
-                            <!--                            android:layout_width="match_parent"-->
-                            <!--                            android:id="@+id/et_pan"-->
-                            <!--                            android:layout_height="wrap_content">-->
+                                    android:textColor="#43D305"/>
 
-                            <!--                            <EditText-->
-                            <!--                                android:id="@+id/et_panchayat_name"-->
-                            <!--                                android:layout_width="fill_parent"-->
-                            <!--                                android:layout_height="wrap_content"-->
-                            <!--                                android:drawableLeft="@drawable/ps"-->
-                            <!--                                android:hint="गृह पंचायत का नाम डाले"-->
-                            <!--                                android:singleLine="true"-->
-                            <!--                                android:textColor="#000"-->
-                            <!--                                android:maxLength="25"-->
-                            <!--                                android:imeOptions="actionNext"-->
-                            <!--                                android:inputType="textCapWords"  />-->
-                            <!--                        </android.support.design.widget.TextInputLayout>-->
+                            </LinearLayout>
 
                             <LinearLayout
                                 android:layout_width="match_parent"
