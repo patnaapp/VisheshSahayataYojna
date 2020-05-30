@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Mukhyamantri Vishesh Sahayat Yojana,Bihar</string>
+    <string name="update">Update</string>
+    <string name="ok">OK</string>
+    <string name="wrong_device_text">This device is not registered in your account !</string>
+    <string name="ignore">Ignore</string>
+    <string name="app_version">App Version</string>
+    <string name="authentication_failed">Authentication Failed !</string>
+    <string name="authenticating">Verifying ...</string>
+    <string name="failed">Fail !</string>
+    <string name="login_failed">Wrong User Id / Password</string>
+    <string name="server_down_title">Internet / Server Down  !</string>
+    <string name="server_down_text">No Internet Connectoin !</string>
+    <string name="field_required">This field is required</string>
+    <string name="image">image</string>
+
+    <string name="Dist">District :</string>
+    <string name="Blk">Block :</string>
+    <string name="Facility">Office Name :</string>
+    <string name="Vill_Twon">Designition :</string>
+    <string name="nin">NinNo :</string>
+    <string name="bed">Bed Count :</string>
+    <string name="location">Location :</string>
+    <string name="Population">Mobile :</string>
+    <string name="uploading">प्रमाणित कर रहा है...</string>
+    <string name="no_internet_connection">इंटरनेट कनेक्शन नहीं है   </string>
+
+
+</resources>

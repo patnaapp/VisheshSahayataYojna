@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.bih.nic.in.visheshsahayata">
+
+    <permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <permission android:name="android.permission.READ_PHONE_STATE" />
+    <permission android:name="android.permission.READ_PROFILE" />
+    <permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <permission android:name="android.permission.INTERNET" />
+    <permission android:name="android.permission.CAMERA" />
+    <permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-feature
+        android:name="android.hardware.camera.any"
+        android:required="true" />
+
+    <application
+        android:name="android.support.multidex.MultiDexApplication"
+        android:allowBackup="true"
+        android:hardwareAccelerated="false"
+        android:icon="@drawable/biharlogo"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@drawable/biharlogo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name="com.bih.nic.in.visheshsahayata.activity.PaymentStatus"/>
+        <activity android:name="com.bih.nic.in.visheshsahayata.activity.VideoActivity"
+            android:launchMode="singleInstance"/>
+        <activity android:name="com.bih.nic.in.visheshsahayata.activity.UpdateAdharImageActivity" />
+        <activity
+            android:name="com.bih.nic.in.visheshsahayata.activity.PhotoViewer"
+            android:launchMode="singleInstance" />
+        <activity android:name="com.bih.nic.in.visheshsahayata.activity.VerifyPhoneActivity"
+            android:launchMode="singleInstance"/>
+        <activity
+            android:name="com.bih.nic.in.visheshsahayata.activity.VarifyActivity"
+            android:launchMode="singleInstance" />
+        <activity android:name="com.bih.nic.in.visheshsahayata.activity.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.bih.nic.in.visheshsahayata.activity.LoginActivity"
+            android:launchMode="singleInstance"/>
+        <activity android:name="com.bih.nic.in.visheshsahayata.activity.CameraActivity" />
+    </application>
+
+</manifest>

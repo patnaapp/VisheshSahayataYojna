@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".activity.PaymentStatus">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/header"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        />
+    <include
+        android:id="@+id/footer"
+        layout="@layout/footer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+    <ScrollView
+        android:id="@+id/reg_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_below="@+id/header"
+        android:layout_marginRight="2dp"
+        android:layout_marginTop="2dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+
+            <TextView
+                android:visibility="invisible"
+                android:id="@+id/login_title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="22dp"
+                android:gravity="center_horizontal"
+                android:text="Password Setup"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/login_title"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/edittext_style"
+                android:layout_marginBottom="60dp"
+                android:elevation="4dp"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:weightSum="2"
+                        android:padding="10dp"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/et_Aaadharno"
+                            android:layout_width="0dp"
+                            android:layout_weight="1.5"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/edittext_style"
+                            android:hint="आधार नंबर डाले"
+                            android:inputType="number"
+                            android:padding="10dp"
+                            android:textColor="#000000"
+                            android:maxLength="12"/>
+
+                        <Button
+                            android:layout_width="0dp"
+                            android:layout_weight="0.5"
+                            android:id="@+id/btn_search"
+                            android:background="@drawable/buttonback"
+                            android:layout_marginLeft="3dp"
+                            android:padding="2dp"
+                            android:layout_marginRight="3dp"
+                            android:text="search"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:id="@+id/ll_Bensearch"
+                        android:visibility="gone"
+                        android:layout_margin="10dp"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:text="आवेदन की स्थिति"
+                            android:textColor="#000"
+                            android:textSize="22dp"
+                            android:textStyle="bold"
+                            />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:weightSum="1"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="0.2"
+                                android:layout_height="wrap_content"
+                                android:text="Status :"
+                                android:textStyle="bold"
+                                android:textColor="#000"
+                                android:layout_marginTop="20dp"
+                                />
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="0.8"
+                                android:id="@+id/status"
+                                android:layout_height="wrap_content"
+                                android:text="N/A"
+                                android:layout_marginTop="20dp"
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:weightSum="1"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="0.2"
+                                android:layout_height="wrap_content"
+                                android:text="Remarks :"
+                                android:textStyle="bold"
+                                android:textColor="#000"
+                                android:layout_marginTop="20dp"
+                                />
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="0.8"
+                                android:layout_height="wrap_content"
+                                android:text="N/A"
+                                android:id="@+id/remarks"
+                                android:layout_marginTop="20dp"
+                                />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <Button
+                        android:id="@+id/btn_reg_new"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_margin="20dp"
+                        android:background="#522f54"
+                        android:text="रजिस्ट्रेशन करें"
+                        android:textAllCaps="false"
+                        android:textColor="#fff"
+                        android:textSize="18sp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+
+
+
+            <ImageView
+                android:id="@+id/user_profile_photo"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:elevation="4dp"
+                android:src="@drawable/biharlogo"
+                android:layout_alignTop="@+id/login_title"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="32dp" />
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

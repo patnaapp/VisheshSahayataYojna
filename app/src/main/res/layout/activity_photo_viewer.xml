@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.PhotoViewer">
+
+
+
+    <LinearLayout
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_width="match_parent"
+        android:visibility="visible"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:padding="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@android:color/white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:text="फोटो सैंपल"
+                    android:textSize="20sp"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:layout_height="wrap_content"
+                    android:text="अपने आधार कार्ड का फोटो इसी तरह से खिचियेगा"
+                    android:textSize="16sp"
+                    android:gravity="center_vertical"
+                    android:textStyle="bold"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+
+
+                    <RelativeLayout
+                        android:id="@+id/rel_water_res1"
+                        android:layout_width="match_parent"
+                        android:layout_weight=".5"
+                        android:layout_height="170dp"
+                        android:padding="1dp"
+                        android:visibility="visible"
+                        android:background="@drawable/aadhar_new1234"
+                        >
+                        <ImageView
+                            android:id="@+id/img_pic21"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="fitXY"/>
+                        <ImageView
+                            android:id="@+id/img_pic211"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="fitXY"/>
+
+                        <ImageView
+                            android:id="@+id/viewIMG21"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignTop="@+id/img_pic21"
+                            android:layout_alignRight="@+id/img_pic21"
+                            android:src="@drawable/view"
+                            android:visibility="gone"/>
+                        <LinearLayout
+                            android:id="@+id/take_pic_water_res1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone"
+                                android:layout_gravity="center_horizontal"
+                                android:src="@drawable/ic_action_photo"
+                                android:id="@+id/imageView1" />
+                            <LinearLayout
+                                android:id="@+id/take_pic_anganbari1111"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:padding="5dp"
+                                    android:visibility="gone"
+                                    android:textColor="@color/holo_red_dark"
+                                    android:layout_gravity="center_vertical"
+                                    android:textSize="15dp"
+                                    android:text="ऐसा आधार कार्ड का फोटो ले जिससे केवल आधार कार्ड ही स्पष्ट दिखे तथा आधार कार्ड का सीधा फोटो होना चाहिए |"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="20dp"
+                                    android:visibility="gone"
+                                    android:textColor="@color/holo_red_dark"
+                                    android:layout_gravity="center_vertical"
+                                    android:text="*"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_marginTop="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="wrap_content"
+                        android:text="अपने चेहरा का फोटो इसी तरह से खिचियेगा"
+                        android:textSize="16sp"
+                        android:gravity="center_vertical"
+                        android:textColor="@android:color/holo_red_dark"
+                        android:textStyle="bold"/>
+
+
+                    <RelativeLayout
+                        android:id="@+id/rel_water_res"
+                        android:layout_width="wrap_content"
+                        android:layout_height="170dp"
+                        android:padding="1dp"
+                        android:visibility="visible"
+                        android:background="@drawable/sample455"
+                        >
+
+                        <ImageView
+                            android:id="@+id/img_pic2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            />
+
+                        <ImageView
+                            android:id="@+id/viewIMG2"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignTop="@+id/img_pic2"
+                            android:layout_alignRight="@+id/img_pic2"
+                            android:src="@drawable/view"
+                            android:visibility="gone"/>
+                        <LinearLayout
+                            android:id="@+id/take_pic_water_res"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone"
+                                android:layout_gravity="center_horizontal"
+                                android:src="@drawable/ic_action_photo"
+                                android:id="@+id/imageView" />
+                            <LinearLayout
+                                android:id="@+id/take_pic_anganbari111"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:padding="5dp"
+                                    android:visibility="gone"
+                                    android:textColor="@color/holo_red_dark"
+                                    android:layout_gravity="center_vertical"
+                                    android:textSize="15dp"
+                                    android:text="ऐसा आधार कार्ड का फोटो ले जिससे केवल आधार कार्ड ही स्पष्ट दिखे तथा आधार कार्ड का सीधा फोटो होना चाहिए |"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="20dp"
+                                    android:visibility="gone"
+                                    android:textColor="@color/holo_red_dark"
+                                    android:layout_gravity="center_vertical"
+                                    android:text="*"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <LinearLayout
+
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:weightSum="2">
+
+                        <Button
+                            android:layout_weight="1"
+                            android:id="@+id/btn_confirm"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:textStyle="bold"
+                            android:background="#429500"
+                            android:text="पंजीकरण के लिए इस बटन को दबाये"
+                            android:textAllCaps="false"
+                            android:textColor="#fff"
+                            android:textSize="14sp" />
+
+                        <Button
+                        android:layout_weight="1"
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/btn_update_aadhar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:visibility="visible"
+                        android:background="#E75B65"
+                        android:textStyle="bold"
+                        android:text="आधार कार्ड फोटो और खाता संख्या में सुधार करने,अपना स्टेटस देखने एवं विडियो डालने के लिए इस बटन को दबाये"
+                        android:textAllCaps="false"
+                        android:textColor="#fff"
+                        android:textSize="14sp" />
+
+<!--                        <Button-->
+<!--                            android:layout_weight="1"-->
+<!--                            android:layout_marginTop="10dp"-->
+<!--                            android:id="@+id/btn_video"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="end"-->
+<!--                            android:visibility="visible"-->
+<!--                            android:background="#3EB4CD"-->
+<!--                            android:textStyle="bold"-->
+<!--                            android:text="माननीय मुख्यमंत्री बिहार श्री नीतीश कुमार का विडियो सन्देश"-->
+<!--                            android:textAllCaps="false"-->
+<!--                            android:textColor="#fff"-->
+<!--                            android:textSize="14sp" />-->
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        android:weightSum="2">
+
+                        <Button
+                            android:layout_weight="1"
+                            android:id="@+id/btn_status"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:background="#522f54"
+                            android:layout_marginRight="8dp"
+                            android:text="अपना पेमेंट स्टेटस जानने के लिए क्लिक करे"
+                            android:textAllCaps="false"
+                            android:textColor="#fff"
+                            android:textSize="18sp" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/ll_version"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true">
+
+                    <TextView
+                        android:id="@+id/txtVersion"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".5"
+                        android:layout_marginBottom="5dp"
+                        android:gravity="center"
+                        android:text="App Version"
+                        android:textColor="#000"
+                        android:textSize="15sp"
+                        android:typeface="serif" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</LinearLayout>
