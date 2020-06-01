@@ -194,17 +194,20 @@
 
                             <LinearLayout
                                 android:layout_width="fill_parent"
-                                android:layout_height="wrap_content"
+                                android:layout_height="45dp"
                                 android:orientation="vertical">
 
                                 <Spinner
-                                    android:background="@drawable/textboxshape"
+
                                     android:layout_marginTop="4dp"
                                     android:layout_marginBottom="4dp"
                                     android:id="@+id/sp_state"
                                     android:layout_width="match_parent"
-                                    android:layout_height="36dp" />
-
+                                    android:layout_height="match_parent" />
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:background="@color/colorPrimary"/>
 
 
                             </LinearLayout>
@@ -241,15 +244,15 @@
 
                                 <RelativeLayout
                                     android:layout_width="fill_parent"
-                                    android:layout_height="wrap_content">
+                                    android:layout_height="45dp">
 
                                     <Spinner
-                                        android:background="@drawable/spinner_bg1"
+
                                         android:layout_marginTop="4dp"
                                         android:layout_marginBottom="4dp"
                                         android:id="@+id/sp_district"
                                         android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
+                                        android:layout_height="match_parent"
                                         android:layout_toLeftOf="@+id/sync_dist"/>
 
                                     <ImageView
@@ -261,7 +264,10 @@
                                         android:src="@drawable/synall"/>
 
                                 </RelativeLayout>
-
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:background="@color/colorPrimary"/>
                             </LinearLayout>
 
                             <LinearLayout
@@ -288,15 +294,15 @@
 
                             <RelativeLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content">
+                                android:layout_height="45dp">
 
                                 <Spinner
-                                    android:background="@drawable/spinner_bg1"
+
                                     android:layout_marginTop="4dp"
                                     android:layout_marginBottom="4dp"
                                     android:id="@+id/sp_block"
                                     android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
+                                    android:layout_height="match_parent"
                                     android:layout_toLeftOf="@+id/sync_blk"/>
 
                                 <ImageView
@@ -308,7 +314,10 @@
                                     android:src="@drawable/synall"/>
 
                             </RelativeLayout>
-
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:background="@color/colorPrimary"/>
                         </LinearLayout>
 
                             <LinearLayout
@@ -528,12 +537,11 @@
                                     android:orientation="vertical">
 
                                     <Spinner
-                                        android:background="@drawable/spinner_bg1"
                                         android:layout_marginTop="4dp"
                                         android:layout_marginBottom="4dp"
                                         android:id="@+id/spn_gender"
                                         android:layout_width="match_parent"
-                                        android:layout_height="wrap_content" />
+                                        android:layout_height="match_parent" />
 
                                     <LinearLayout
                                         android:layout_width="match_parent"
