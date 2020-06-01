@@ -5,13 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
-
     <include
         android:id="@+id/header"
         layout="@layout/header"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="?attr/actionBarSize"
         android:layout_alignParentTop="true"
         />
     <include
@@ -21,718 +19,657 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true" />
 
-    <ImageView
+    <LinearLayout
+        android:layout_margin="8dp"
+        android:id="@+id/ll_title"
         android:layout_below="@+id/header"
-        android:id="@+id/user_profile_photo"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:src="@drawable/indian_gov"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="12dp" />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/login_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="लाभार्थी का विवरण "
+            android:textColor="@color/colorPrimary"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_gravity="center_horizontal"
+            android:layout_below="@+id/login_title"
+            android:layout_width="130dp"
+            android:layout_height="1dp"
+            android:background="@color/colorPrimary"/>
+
+    </LinearLayout>
+<!--    <ImageView-->
+<!--        android:id="@+id/user_profile_photo"-->
+<!--        android:layout_width="80dp"-->
+<!--        android:layout_height="80dp"-->
+<!--        android:layout_below="@+id/header"-->
+<!--        android:layout_marginTop="6dp"-->
+<!--        android:src="@drawable/indian_gov" />-->
 
     <ScrollView
-
         android:id="@+id/reg_form"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="2dp"
-        android:layout_marginLeft="2dp"
-        android:layout_below="@+id/user_profile_photo"
-        android:layout_marginRight="2dp"
-        android:layout_marginTop="2dp">
-        <RelativeLayout
-            android:layout_width="match_parent"
+        android:layout_below="@+id/ll_title"
+        android:layout_above="@+id/footer">
+
+        <LinearLayout
+            android:layout_margin="10dp"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true">
+            android:orientation="vertical">
 
+<!--            <LinearLayout-->
+<!--                android:layout_marginRight="2dp"-->
+<!--                android:orientation="vertical"-->
+<!--                android:visibility="gone"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content">-->
+<!--                <TextView-->
 
-            <TextView
+<!--                    android:layout_marginLeft="2dp"-->
+<!--                    android:textColor="#000"-->
+<!--                    android:text="माता / पिता का नाम(आधार के अनुसार)"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_width="match_parent">-->
+<!--                </TextView>-->
+<!--                <EditText-->
+<!--                    android:id="@+id/et_father_Name_new11"-->
+<!--                    android:background="@drawable/bgeditbox"-->
+<!--                    style="@style/Edit_Box"-->
+<!--                    android:inputType="textCapSentences"-->
+<!--                    android:maxLength="25"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"/>-->
 
-                android:id="@+id/login_title"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="2dp"
-                android:layout_marginTop="12dp"
-                android:gravity="center_horizontal"
-                android:text="लाभार्थी का विवरण "
-                android:textColor="@color/colorPrimary"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+<!--            </LinearLayout>-->
+<!--            <LinearLayout-->
+<!--                android:layout_marginRight="2dp"-->
+<!--                android:orientation="vertical"-->
+<!--                android:visibility="gone"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content">-->
+<!--                <TextView-->
+
+<!--                    android:layout_marginLeft="2dp"-->
+<!--                    android:textColor="#000"-->
+<!--                    android:text="आधार नंबर (माता / पिता का)"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_width="match_parent">-->
+<!--                </TextView>-->
+<!--                <EditText-->
+<!--                    android:id="@+id/et_father_aadhar_number_new11"-->
+<!--                    android:background="@drawable/bgeditbox"-->
+<!--                    style="@style/Edit_Box"-->
+<!--                    android:inputType="textCapSentences"-->
+<!--                    android:maxLength="25"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"/>-->
+
+<!--            </LinearLayout>-->
+<!--            <LinearLayout-->
+<!--                android:layout_marginRight="2dp"-->
+<!--                android:orientation="vertical"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:visibility="gone"-->
+<!--                android:layout_height="wrap_content">-->
+<!--                <TextView-->
+
+<!--                    android:layout_marginLeft="2dp"-->
+<!--                    android:text="शिशु का नाम हिंदी मे  [*]    "-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_width="match_parent">-->
+<!--                </TextView>-->
+<!--                <EditText-->
+<!--                    android:id="@+id/edt_childname_hindi"-->
+<!--                    android:background="@drawable/bgeditbox"-->
+<!--                    style="@style/Edit_Box"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"/>-->
+
+<!--            </LinearLayout>-->
+
             <LinearLayout
-                android:layout_below="@+id/login_title"
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/colorPrimary"/>
-            <RelativeLayout
-                android:layout_width="fill_parent"
+                android:id="@+id/ll_all"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/login_title"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:elevation="4dp"
-                android:orientation="vertical"
-                android:padding="10dp">
+                android:orientation="vertical">
+
 
                 <LinearLayout
+                    android:layout_marginBottom="12dp"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-
+                    android:gravity="center"
                     android:orientation="vertical">
-                    <LinearLayout
-                        android:layout_marginRight="2dp"
-                        android:orientation="vertical"
-                        android:visibility="gone"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-                        <TextView
 
-                            android:layout_marginLeft="2dp"
-                            android:textColor="#000"
-                            android:text="माता / पिता का नाम(आधार के अनुसार)"
-                            android:layout_height="match_parent"
-                            android:layout_width="match_parent">
-                        </TextView>
-                        <EditText
-                            android:id="@+id/et_father_Name_new11"
-                            android:background="@drawable/bgeditbox"
-                            style="@style/Edit_Box"
-                            android:inputType="textCapSentences"
-                            android:maxLength="25"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"/>
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="गृह राज्य का नाम"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textSize="13sp"
+                            android:textStyle="normal"
+                            android:textColor="@color/black"/>
 
                     </LinearLayout>
-                    <LinearLayout
-                        android:layout_marginRight="2dp"
-                        android:orientation="vertical"
-                        android:visibility="gone"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-                        <TextView
-
-                            android:layout_marginLeft="2dp"
-                            android:textColor="#000"
-                            android:text="आधार नंबर (माता / पिता का)"
-                            android:layout_height="match_parent"
-                            android:layout_width="match_parent">
-                        </TextView>
-                        <EditText
-                            android:id="@+id/et_father_aadhar_number_new11"
-                            android:background="@drawable/bgeditbox"
-                            style="@style/Edit_Box"
-                            android:inputType="textCapSentences"
-                            android:maxLength="25"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"/>
-
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_marginRight="2dp"
-                        android:orientation="vertical"
-                        android:layout_width="match_parent"
-                        android:visibility="gone"
-                        android:layout_height="wrap_content">
-                        <TextView
-
-                            android:layout_marginLeft="2dp"
-                            android:text="शिशु का नाम हिंदी मे  [*]    "
-                            android:layout_height="match_parent"
-                            android:layout_width="match_parent">
-                        </TextView>
-                        <EditText
-                            android:id="@+id/edt_childname_hindi"
-                            android:background="@drawable/bgeditbox"
-                            style="@style/Edit_Box"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"/>
-
-                    </LinearLayout>
-                    <!--<android.support.design.widget.TextInputLayout-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="wrap_content">-->
-
-                    <!--<Spinner-->
-                    <!--android:id="@+id/sp_dist"-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:background="@drawable/spinner_bg1"-->
-                    <!--android:imeOptions="actionUnspecified"-->
-                    <!--android:layout_marginTop="16dp"-->
-                    <!--android:textAppearance="?android:textAppearanceSmall"-->
-                    <!--android:textColor="#43D305" />-->
-                    <!--</android.support.design.widget.TextInputLayout>-->
-
 
                     <LinearLayout
-                        android:layout_width="match_parent"
-                        android:id="@+id/ll_all"
+                        android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
 
-
-                        <LinearLayout
-                            android:layout_marginBottom="12dp"
-                            android:layout_width="fill_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:orientation="vertical">
-
-                            <LinearLayout
-                                android:layout_width="fill_parent"
-                                android:layout_height="wrap_content">
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="राज्य का नाम"
-                                    android:textAppearance="?android:attr/textAppearanceSmall"
-                                    android:textSize="14sp"
-                                    android:textStyle="normal"
-                                    android:textColor="@color/black"/>
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="fill_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical">
-
-                                <Spinner
-                                    android:background="@drawable/textboxshape"
-                                    android:layout_marginTop="4dp"
-                                    android:layout_marginBottom="4dp"
-                                    android:id="@+id/sp_state"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="36dp" />
-
-
-
-                            </LinearLayout>
-
-                        </LinearLayout>
-                        <LinearLayout
+                        <Spinner
+                            android:background="@drawable/spinner_bg1"
+                            android:layout_marginTop="4dp"
+                            android:id="@+id/sp_state"
                             android:layout_width="match_parent"
-                            android:id="@+id/ll_all1"
+                            android:layout_height="36dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:id="@+id/ll_all1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_marginBottom="12dp"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical">
+                            android:text="गृह जिला का नाम"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textSize="13sp"
+                            android:textStyle="normal"
+                            android:textColor="@color/black"/>
 
-
-                            <LinearLayout
-                                android:layout_marginBottom="12dp"
-                                android:layout_width="fill_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:orientation="vertical">
-
-                                <LinearLayout
-                                    android:layout_width="fill_parent"
-                                    android:layout_height="wrap_content">
-
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:text="जिला का नाम"
-                                        android:textAppearance="?android:attr/textAppearanceSmall"
-                                        android:textSize="14sp"
-                                        android:textStyle="normal"
-                                        android:textColor="@color/black"/>
-
-                                </LinearLayout>
-
-                                <RelativeLayout
-                                    android:layout_width="fill_parent"
-                                    android:layout_height="wrap_content">
-
-                                    <Spinner
-                                        android:background="@drawable/spinner_bg1"
-                                        android:layout_marginTop="4dp"
-                                        android:layout_marginBottom="4dp"
-                                        android:id="@+id/sp_district"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:layout_toLeftOf="@+id/sync_dist"/>
-
-                                    <ImageView
-                                        android:layout_margin="8dp"
-                                        android:id="@+id/sync_dist"
-                                        android:layout_alignParentRight="true"
-                                        android:layout_width="30dp"
-                                        android:layout_height="30dp"
-                                        android:src="@drawable/synall"/>
-
-                                </RelativeLayout>
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                            android:layout_marginBottom="12dp"
+                        <RelativeLayout
                             android:layout_width="fill_parent"
+                            android:layout_height="wrap_content">
+
+                            <Spinner
+                                android:background="@drawable/spinner_bg1"
+                                android:layout_marginTop="4dp"
+                                android:id="@+id/sp_district"
+                                android:layout_width="match_parent"
+                                android:layout_height="36dp"
+                                android:layout_toLeftOf="@+id/sync_dist"/>
+
+                            <ImageView
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="8dp"
+                                android:id="@+id/sync_dist"
+                                android:layout_alignParentRight="true"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/sync"/>
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/tv_dist_inst"
+                            android:layout_below="@+id/sync_dist"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:orientation="vertical">
+                            android:text="यदि जिला का नाम नहीं मिलता है तो डाउनलोड बटन पे क्लिक करें"
+                            android:textSize="11sp"
+                            android:textColor="@color/colorPrimary"/>
 
-                            <LinearLayout
-                                android:layout_width="fill_parent"
-                                android:layout_height="wrap_content">
+                    </LinearLayout>
 
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="गृह प्रखंड का नाम"
-                                    android:textAppearance="?android:attr/textAppearanceSmall"
-                                    android:textSize="14sp"
-                                    android:textStyle="normal"
-                                    android:textColor="@color/black"/>
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
 
-                            </LinearLayout>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="गृह प्रखंड का नाम"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textSize="13sp"
+                            android:textStyle="normal"
+                            android:textColor="@color/black"/>
 
-                            <RelativeLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content">
-
-                                <Spinner
-                                    android:background="@drawable/spinner_bg1"
-                                    android:layout_marginTop="4dp"
-                                    android:layout_marginBottom="4dp"
-                                    android:id="@+id/sp_block"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:layout_toLeftOf="@+id/sync_blk"/>
-
-                                <ImageView
-                                    android:layout_margin="8dp"
-                                    android:id="@+id/sync_blk"
-                                    android:layout_alignParentRight="true"
-                                    android:layout_width="30dp"
-                                    android:layout_height="30dp"
-                                    android:src="@drawable/synall"/>
-
-                            </RelativeLayout>
-
-                        </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="fill_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:visibility="gone"
-                                android:orientation="vertical"
-                                android:paddingLeft="10dp"
-                                android:paddingTop="8dp"
-                                android:paddingRight="10dp"
-                                android:paddingBottom="5dp">
-
-                                <TextView
-                                    android:id="@+id/tv_panchayat"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:text="गृह पंचायत का नाम"
-                                    android:textColor="#000000"
-                                    android:textStyle="bold" />
-
-                                <Spinner
-                                    android:id="@+id/sp_panchayat"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:background="@drawable/spinner_bg1"
-                                    android:imeOptions="actionUnspecified"
-                                    android:paddingRight="20dp"
-                                    android:textAppearance="?android:textAppearanceSmall"
-                                    android:textColor="#43D305"/>
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:id="@+id/ll_pan"
-                                android:visibility="gone"
-                                android:orientation="vertical">
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginLeft="9dp"
-                                    android:textColor="#000000"
-                                    android:textStyle="bold"
-                                    android:text="गृह पंचायत का नाम डाले"/>
-                                <EditText
-                                    android:id="@+id/et_panchayat_name"
-                                    android:layout_width="fill_parent"
-                                    android:layout_height="wrap_content"
-                                    android:drawableLeft="@drawable/ps"
-                                    android:hint="गृह पंचायत का नाम डाले"
-                                    android:singleLine="true"
-                                    android:textColor="#000"
-                                    android:maxLength="25"
-                                    android:imeOptions="actionNext"
-                                    android:inputType="textCapWords"  />
-                            </LinearLayout>
-                            <ProgressBar
-                                android:id="@+id/spinner"
-                                android:translationZ="7dp"
-                                android:layout_gravity="center_vertical|center_horizontal"
-                                android:layout_centerInParent="true"
-                                android:visibility="gone"
-                                android:tooltipText="Please wait for GPS"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content" >
-                            </ProgressBar>
-
-                            <!--                        <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner-->
-                            <!--                            android:id="@+id/sp_district"-->
-                            <!--                            android:layout_width="match_parent"-->
-                            <!--                            android:layout_height="wrap_content"-->
-                            <!--                            android:hint="जिला का नाम"-->
-                            <!--                            android:layout_marginTop="16dp"-->
-                            <!--                            android:drawableLeft="@drawable/district"-->
-                            <!--                            android:textColorHint="#05ab9a"-->
-                            <!--                            app:met_floatingLabel="normal" />-->
-
-                            <!--                        <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner-->
-                            <!--                            android:id="@+id/sp_block"-->
-                            <!--                            android:layout_width="match_parent"-->
-                            <!--                            android:layout_height="wrap_content"-->
-                            <!--                            android:hint="प्रखंड का नाम"-->
-                            <!--                            android:layout_marginTop="16dp"-->
-                            <!--                            android:drawableLeft="@drawable/district"-->
-                            <!--                            android:textColorHint="#05ab9a"-->
-                            <!--                            app:met_floatingLabel="normal" />-->
-
-                            <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
-                                android:visibility="gone"
-                                android:id="@+id/sp_project"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:hint="परियोजना का नाम"
-                                android:layout_marginTop="16dp"
-                                android:drawableLeft="@drawable/district"
-                                android:textColorHint="#05ab9a"
-                                app:met_floatingLabel="normal" />
-
-                            <!--                        <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner-->
-                            <!--                            android:id="@+id/sp_panchayat"-->
-                            <!--                            android:layout_width="match_parent"-->
-                            <!--                            android:layout_height="wrap_content"-->
-                            <!--                            android:hint="पंचायत का नाम"-->
-                            <!--                            android:layout_marginTop="16dp"-->
-                            <!--                            android:drawableLeft="@drawable/district"-->
-                            <!--                            android:textColorHint="#05ab9a"-->
-                            <!--                            app:met_floatingLabel="normal" />-->
-
-                            <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
-                                android:id="@+id/sp_anganwadi"
-                                android:visibility="gone"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:hint="आंगनवाड़ी का नाम"
-                                android:layout_marginTop="16dp"
-                                android:drawableLeft="@drawable/district"
-                                android:textColorHint="#05ab9a"
-                                app:met_floatingLabel="normal" />
-
-                            <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
-                                android:visibility="gone"
-                                android:id="@+id/sp_ben"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:hint="लाभार्थी का प्रकार"
-                                android:layout_marginTop="16dp"
-                                android:drawableLeft="@drawable/district"
-                                android:textColorHint="#05ab9a"
-                                app:met_floatingLabel="normal" />
-
-                            <LinearLayout
-                                android:layout_marginTop="16dp"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical">
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="लाभार्थी का नाम (आधार के अनुसार)"
-                                    android:textColor="@color/black"
-                                    android:textSize="12sp"/>
-
-                                <EditText
-                                    android:layout_marginTop="4dp"
-                                    android:id="@+id/et_husband_Name"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:background="@drawable/textboxshape"
-                                    android:hint="लाभार्थी का नाम (आधार के अनुसार)"
-                                    android:padding="10dp"
-                                    android:inputType="number"
-                                    android:maxLength="12"
-                                    android:singleLine="true"
-                                    android:textColor="#222222"
-                                    android:focusableInTouchMode="true"
-                                    android:textSize="15sp" />
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_marginTop="16dp"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical">
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="जन्म का साल(आधार के अनुसार)"
-                                    android:textColor="@color/black"
-                                    android:textSize="12sp"/>
-
-                                <EditText
-                                    android:layout_marginTop="4dp"
-                                    android:id="@+id/et_year_birth"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:background="@drawable/textboxshape"
-                                    android:hint="जन्म का साल(आधार के अनुसार)"
-                                    android:padding="10dp"
-                                    android:inputType="number"
-                                    android:maxLength="12"
-                                    android:singleLine="true"
-                                    android:textColor="#222222"
-                                    android:focusableInTouchMode="true"
-                                    android:textSize="15sp" />
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_marginTop="16dp"
-
-                                android:layout_width="fill_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:orientation="vertical">
-
-                                <LinearLayout
-                                    android:layout_width="fill_parent"
-                                    android:layout_height="wrap_content">
-
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:text="लाभार्थी का लिंग"
-                                        android:textAppearance="?android:attr/textAppearanceSmall"
-                                        android:textSize="14sp"
-                                        android:textStyle="normal"
-                                        android:textColor="@color/black"/>
-
-                                </LinearLayout>
-
-                                <LinearLayout
-                                    android:layout_width="fill_parent"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="vertical">
-
-                                    <Spinner
-                                        android:background="@drawable/spinner_bg1"
-                                        android:layout_marginTop="4dp"
-                                        android:layout_marginBottom="4dp"
-                                        android:id="@+id/spn_gender"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content" />
-
-                                    <LinearLayout
-                                        android:layout_width="match_parent"
-                                        android:layout_height="1dp"
-                                        android:background="@color/colorPrimary"/>
-
-                                </LinearLayout>
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_marginTop="16dp"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical">
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="पिता / पति  का नाम "
-                                    android:textColor="@color/black"
-                                    android:textSize="12sp"/>
-
-                                <EditText
-                                    android:layout_marginTop="4dp"
-                                    android:id="@+id/et_wife_Name"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:background="@drawable/textboxshape"
-                                    android:hint="पिता / पति  का नाम "
-                                    android:padding="10dp"
-                                    android:inputType="number"
-                                    android:maxLength="12"
-                                    android:singleLine="true"
-                                    android:textColor="#222222"
-                                    android:focusableInTouchMode="true"
-                                    android:textSize="15sp" />
-                            </LinearLayout>
-
-
-
-
-                            <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
-                                android:id="@+id/sp_category"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:hint="श्रेणी"
-                                android:visibility="gone"
-                                android:layout_marginTop="16dp"
-                                android:drawableLeft="@drawable/district"
-                                android:textColorHint="#05ab9a"
-                                app:met_floatingLabel="normal" />
-
-                            <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
-                                android:id="@+id/sp_aadhar_num"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:hint="आधार नंबर किनका है"
-                                android:visibility="gone"
-                                android:layout_marginTop="16dp"
-                                android:drawableLeft="@drawable/district"
-                                android:textColorHint="#05ab9a"
-                                app:met_floatingLabel="normal" />
-
-                            <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
-                                android:id="@+id/sp_aadhar_num_mahila"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:hint="आधार नंबर किनका है"
-                                android:visibility="gone"
-                                android:layout_marginTop="16dp"
-                                android:drawableLeft="@drawable/district"
-                                android:textColorHint="#05ab9a"
-                                app:met_floatingLabel="normal" />
-
-                            <android.support.design.widget.TextInputLayout
-                                android:visibility="gone"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content">
-
-                                <EditText
-                                    android:id="@+id/et_father_Name_new"
-                                    android:layout_width="fill_parent"
-                                    android:layout_height="wrap_content"
-                                    android:drawableLeft="@drawable/profile1_icon"
-                                    android:singleLine="true"
-                                    android:imeOptions="actionNext"
-                                    android:inputType="textCapWords" />
-                            </android.support.design.widget.TextInputLayout>
-                            <LinearLayout
-                                android:layout_marginTop="16dp"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical">
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="लाभार्थी का आधार नंबर"
-                                    android:textColor="@color/black"
-                                    android:textSize="12sp"/>
-
-                                <EditText
-                                    android:layout_marginTop="4dp"
-                                    android:id="@+id/et_father_aadhar_number_new"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:background="@drawable/textboxshape"
-                                    android:hint="लाभार्थी का आधार नंबर"
-                                    android:padding="10dp"
-                                    android:inputType="number"
-                                    android:maxLength="12"
-                                    android:singleLine="true"
-                                    android:textColor="#222222"
-                                    android:focusableInTouchMode="true"
-                                    android:textSize="15sp" />
-                            </LinearLayout>
-
-
-                        </LinearLayout>
-
-
-                        <android.support.design.widget.TextInputLayout
+                        <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
 
-                            <EditText
-                                android:id="@+id/et_Mobile_Number"
-                                android:layout_width="fill_parent"
-                                android:visibility="gone"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="16dp"
-                                android:singleLine="true"
-                                android:imeOptions="actionNext"
-                                android:maxLength="10"
-                                android:drawableLeft="@drawable/mobile"
-                                android:hint="मोबाइल नंबर"
-                                android:inputType="phone" />
-                        </android.support.design.widget.TextInputLayout>
+                            <Spinner
+                                android:background="@drawable/spinner_bg1"
+                                android:layout_marginTop="4dp"
+                                android:id="@+id/sp_block"
+                                android:layout_width="match_parent"
+                                android:layout_height="36dp"
+                                android:layout_toLeftOf="@+id/sync_blk"/>
 
+                            <ImageView
+                                android:layout_marginLeft="8dp"
+                                android:id="@+id/sync_blk"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/sync"/>
 
+                        </RelativeLayout>
 
+                        <TextView
+                            android:id="@+id/tv_blck_inst"
+                            android:layout_below="@+id/sync_dist"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="यदि प्रखंड का नाम नहीं मिलता है तो डाउनलोड बटन पे क्लिक करें"
+                            android:textSize="11sp"
+                            android:textColor="@color/colorPrimary"/>
 
-                        <!--<android.support.design.widget.TextInputLayout-->
-                        <!--android:layout_width="match_parent"-->
-                        <!--android:layout_height="wrap_content">-->
-
-                        <!--<EditText-->
-                        <!--android:id="@+id/et_Thana"-->
-                        <!--android:layout_width="fill_parent"-->
-                        <!--android:layout_height="wrap_content"-->
-                        <!--android:layout_marginTop="16dp"-->
-                        <!--android:singleLine="true"-->
-                        <!--android:drawableLeft="@drawable/ps"-->
-                        <!--android:hint="थाना का नाम"-->
-                        <!--android:inputType="textCapWords" />-->
-                        <!--</android.support.design.widget.TextInputLayout>-->
-
-                        <Button
-                            android:id="@+id/btn_verify_new"
-                            android:layout_width="fill_parent"
-                            android:layout_height="40dp"
-                            android:layout_margin="20dp"
-                            android:background="#522f54"
-                            android:text="सत्यापित करे"
-                            android:textAllCaps="false"
-                            android:textColor="#fff"
-                            android:textSize="18sp" />
                     </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:visibility="gone"
+                        android:orientation="vertical"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="8dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="5dp">
+
+                        <TextView
+                            android:id="@+id/tv_panchayat"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="गृह पंचायत का नाम"
+                            android:textColor="#000000"
+                            android:textStyle="bold" />
+
+                        <Spinner
+                            android:id="@+id/sp_panchayat"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/spinner_bg1"
+                            android:imeOptions="actionUnspecified"
+                            android:paddingRight="20dp"
+                            android:textAppearance="?android:textAppearanceSmall"
+                            android:textColor="#43D305"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ll_pan"
+                        android:visibility="gone"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="9dp"
+                            android:textColor="#000000"
+                            android:textStyle="bold"
+                            android:text="गृह पंचायत का नाम डाले"/>
+                        <EditText
+                            android:id="@+id/et_panchayat_name"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ps"
+                            android:hint="गृह पंचायत का नाम डाले"
+                            android:singleLine="true"
+                            android:textColor="#000"
+                            android:maxLength="25"
+                            android:imeOptions="actionNext"
+                            android:inputType="textCapWords"  />
+                    </LinearLayout>
+                    <ProgressBar
+                        android:id="@+id/spinner"
+                        android:translationZ="7dp"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:layout_centerInParent="true"
+                        android:visibility="gone"
+                        android:tooltipText="Please wait for GPS"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" >
+                    </ProgressBar>
+
+                    <!--                        <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner-->
+                    <!--                            android:id="@+id/sp_district"-->
+                    <!--                            android:layout_width="match_parent"-->
+                    <!--                            android:layout_height="wrap_content"-->
+                    <!--                            android:hint="जिला का नाम"-->
+                    <!--                            android:layout_marginTop="16dp"-->
+                    <!--                            android:drawableLeft="@drawable/district"-->
+                    <!--                            android:textColorHint="#05ab9a"-->
+                    <!--                            app:met_floatingLabel="normal" />-->
+
+                    <!--                        <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner-->
+                    <!--                            android:id="@+id/sp_block"-->
+                    <!--                            android:layout_width="match_parent"-->
+                    <!--                            android:layout_height="wrap_content"-->
+                    <!--                            android:hint="प्रखंड का नाम"-->
+                    <!--                            android:layout_marginTop="16dp"-->
+                    <!--                            android:drawableLeft="@drawable/district"-->
+                    <!--                            android:textColorHint="#05ab9a"-->
+                    <!--                            app:met_floatingLabel="normal" />-->
+
+                    <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+                        android:visibility="gone"
+                        android:id="@+id/sp_project"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="परियोजना का नाम"
+                        android:layout_marginTop="16dp"
+                        android:drawableLeft="@drawable/district"
+                        android:textColorHint="#05ab9a"
+                        app:met_floatingLabel="normal" />
+
+                    <!--                        <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner-->
+                    <!--                            android:id="@+id/sp_panchayat"-->
+                    <!--                            android:layout_width="match_parent"-->
+                    <!--                            android:layout_height="wrap_content"-->
+                    <!--                            android:hint="पंचायत का नाम"-->
+                    <!--                            android:layout_marginTop="16dp"-->
+                    <!--                            android:drawableLeft="@drawable/district"-->
+                    <!--                            android:textColorHint="#05ab9a"-->
+                    <!--                            app:met_floatingLabel="normal" />-->
+
+                    <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+                        android:id="@+id/sp_anganwadi"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="आंगनवाड़ी का नाम"
+                        android:layout_marginTop="16dp"
+                        android:drawableLeft="@drawable/district"
+                        android:textColorHint="#05ab9a"
+                        app:met_floatingLabel="normal" />
+
+                    <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+                        android:visibility="gone"
+                        android:id="@+id/sp_ben"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="लाभार्थी का प्रकार"
+                        android:layout_marginTop="16dp"
+                        android:drawableLeft="@drawable/district"
+                        android:textColorHint="#05ab9a"
+                        app:met_floatingLabel="normal" />
+
+                    <LinearLayout
+                        android:layout_marginTop="16dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="लाभार्थी का नाम (आधार के अनुसार)"
+                            android:textColor="@color/black"
+                            android:textSize="13sp"/>
+
+                        <EditText
+                            android:layout_marginTop="4dp"
+                            android:id="@+id/et_husband_Name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/textboxshape"
+                            android:hint="लाभार्थी का नाम (आधार के अनुसार)"
+                            android:padding="10dp"
+                            android:inputType="textCapWords"
+                            android:singleLine="true"
+                            android:textColor="#222222"
+                            android:focusableInTouchMode="true"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="16dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="जन्म का साल(आधार के अनुसार)"
+                            android:textColor="@color/black"
+                            android:textSize="13sp"/>
+
+                        <EditText
+                            android:layout_marginTop="4dp"
+                            android:id="@+id/et_year_birth"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/textboxshape"
+                            android:hint="जन्म का साल(आधार के अनुसार)"
+                            android:padding="10dp"
+                            android:inputType="number"
+                            android:maxLength="12"
+                            android:singleLine="true"
+                            android:textColor="#222222"
+                            android:focusableInTouchMode="true"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="16dp"
+
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="लाभार्थी का लिंग"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:textSize="13sp"
+                                android:textStyle="normal"
+                                android:textColor="@color/black"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <Spinner
+                                android:background="@drawable/spinner_bg1"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginBottom="4dp"
+                                android:id="@+id/spn_gender"
+                                android:layout_width="match_parent"
+                                android:layout_height="36dp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="16dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="पिता / पति  का नाम "
+                            android:textColor="@color/black"
+                            android:textSize="13sp"/>
+
+                        <EditText
+                            android:layout_marginTop="4dp"
+                            android:id="@+id/et_wife_Name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/textboxshape"
+                            android:hint="पिता / पति  का नाम "
+                            android:padding="10dp"
+                            android:inputType="textCapWords"
+                            android:singleLine="true"
+                            android:textColor="#222222"
+                            android:focusableInTouchMode="true"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+
+
+
+                    <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+                        android:id="@+id/sp_category"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="श्रेणी"
+                        android:visibility="gone"
+                        android:layout_marginTop="16dp"
+                        android:drawableLeft="@drawable/district"
+                        android:textColorHint="#05ab9a"
+                        app:met_floatingLabel="normal" />
+
+                    <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+                        android:id="@+id/sp_aadhar_num"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="आधार नंबर किनका है"
+                        android:visibility="gone"
+                        android:layout_marginTop="16dp"
+                        android:drawableLeft="@drawable/district"
+                        android:textColorHint="#05ab9a"
+                        app:met_floatingLabel="normal" />
+
+                    <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+                        android:id="@+id/sp_aadhar_num_mahila"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="आधार नंबर किनका है"
+                        android:visibility="gone"
+                        android:layout_marginTop="16dp"
+                        android:drawableLeft="@drawable/district"
+                        android:textColorHint="#05ab9a"
+                        app:met_floatingLabel="normal" />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/et_father_Name_new"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/profile1_icon"
+                            android:singleLine="true"
+                            android:imeOptions="actionNext"
+                            android:inputType="textCapWords" />
+                    </android.support.design.widget.TextInputLayout>
+                    <LinearLayout
+                        android:layout_marginTop="16dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="लाभार्थी का आधार नंबर"
+                            android:textColor="@color/black"
+                            android:textSize="13sp"/>
+
+                        <EditText
+                            android:layout_marginTop="4dp"
+                            android:id="@+id/et_father_aadhar_number_new"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/textboxshape"
+                            android:hint="लाभार्थी का आधार नंबर"
+                            android:padding="10dp"
+                            android:inputType="number"
+                            android:maxLength="12"
+                            android:singleLine="true"
+                            android:textColor="#222222"
+                            android:focusableInTouchMode="true"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+
                 </LinearLayout>
-            </RelativeLayout>
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/et_Mobile_Number"
+                        android:layout_width="fill_parent"
+                        android:visibility="gone"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:singleLine="true"
+                        android:imeOptions="actionNext"
+                        android:maxLength="10"
+                        android:drawableLeft="@drawable/mobile"
+                        android:hint="मोबाइल नंबर"
+                        android:inputType="phone" />
+                </android.support.design.widget.TextInputLayout>
 
 
 
 
-        </RelativeLayout>
+                <!--<android.support.design.widget.TextInputLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content">-->
+
+                <!--<EditText-->
+                <!--android:id="@+id/et_Thana"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="16dp"-->
+                <!--android:singleLine="true"-->
+                <!--android:drawableLeft="@drawable/ps"-->
+                <!--android:hint="थाना का नाम"-->
+                <!--android:inputType="textCapWords" />-->
+                <!--</android.support.design.widget.TextInputLayout>-->
+
+                <Button
+                    android:id="@+id/btn_verify_new"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_margin="20dp"
+                    android:background="@color/colorAccentDark"
+                    android:text="सत्यापित करे"
+                    android:textAllCaps="false"
+                    android:textColor="#fff"
+                    android:textSize="18sp" />
+            </LinearLayout>
+        </LinearLayout>
     </ScrollView>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="58dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
-
-        <TextView
-            android:id="@+id/txtVersion"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight=".5"
-            android:layout_marginBottom="5dp"
-            android:gravity="center"
-            android:text="App Version"
-            android:visibility="gone"
-            android:textColor="#FFFFFF"
-            android:textSize="15sp"
-            android:typeface="serif" />
-
-    </LinearLayout>
 
 </RelativeLayout>

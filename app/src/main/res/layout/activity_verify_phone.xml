@@ -5,16 +5,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     tools:context=".activity.VerifyPhoneActivity">
 
     <include
         android:id="@+id/header"
         layout="@layout/header"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
         android:layout_alignParentTop="true"
         />
+
     <include
         android:id="@+id/footer"
         layout="@layout/footer"
@@ -22,737 +22,792 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true" />
 
+    <LinearLayout
+        android:layout_margin="8dp"
+        android:id="@+id/ll_title"
+        android:layout_below="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/login_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="लाभार्थी का विवरण "
+            android:textColor="@color/colorPrimary"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_gravity="center_horizontal"
+            android:layout_below="@+id/login_title"
+            android:layout_width="130dp"
+            android:layout_height="1dp"
+            android:background="@color/colorPrimary"/>
+
+    </LinearLayout>
+
     <ScrollView
         android:id="@+id/reg_form"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="2dp"
-        android:layout_marginLeft="2dp"
-        android:layout_below="@+id/header"
-        android:layout_marginRight="2dp"
-        android:layout_marginTop="2dp">
+        android:layout_below="@+id/ll_title"
+        android:layout_above="@+id/footer">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
+        <LinearLayout
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true">
+            android:layout_margin="10dp"
+            android:orientation="vertical">
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-            <TextView
-                android:visibility="invisible"
-                android:id="@+id/login_title"
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="लाभार्थी का नाम"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"/>
+
+                <EditText
+                    android:layout_marginTop="4dp"
+                    android:id="@+id/et_user_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/textboxshape"
+                    android:hint="लाभार्थी का नाम"
+                    android:padding="10dp"
+                    android:inputType="textCapWords"
+                    android:singleLine="true"
+                    android:textColor="#222222"
+                    android:focusableInTouchMode="true"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="आधार संख्या"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"/>
+
+                <EditText
+                    android:layout_marginTop="4dp"
+                    android:id="@+id/et_aadhar_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/textboxshape"
+                    android:hint="लाभार्थी का नाम"
+                    android:padding="10dp"
+                    android:inputType="textCapWords"
+                    android:singleLine="true"
+                    android:textColor="#222222"
+                    android:focusableInTouchMode="true"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="12dp"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:layout_marginTop="22dp"
-                android:gravity="center_horizontal"
-                android:text="Password Setup"
-                android:textColor="#FFFFFF"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+                android:gravity="center"
+                android:orientation="vertical">
 
-            <RelativeLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/login_title"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="40dp"
-                android:background="@drawable/edittext_style"
-                android:layout_marginBottom="60dp"
-                android:elevation="4dp"
-                android:orientation="vertical"
-                android:padding="20dp">
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="आप अभी किस राज्य में है ?"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textSize="13sp"
+                        android:textStyle="normal"
+                        android:textColor="@color/black"/>
+
+                </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
                     android:orientation="vertical">
-                    <android.support.design.widget.TextInputLayout
+
+                    <Spinner
+                        android:background="@drawable/spinner_bg1"
+                        android:layout_marginTop="4dp"
+                        android:id="@+id/sp_state"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="36dp" />
 
-                        <EditText
-                            android:id="@+id/et_user_name"
-                            android:layout_width="fill_parent"
-                            android:layout_height="wrap_content"
-                            android:drawableLeft="@drawable/profile1_icon"
-                            android:singleLine="true"
-                            android:textColor="#000"
-                            android:imeOptions="actionNext"
-                            android:maxLength="50"
-                            android:hint="लाभार्थी का नाम"
-                            android:inputType="number" />
-                    </android.support.design.widget.TextInputLayout>
-
-                    <android.support.design.widget.TextInputLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-
-                        <EditText
-                            android:id="@+id/et_aadhar_number"
-                            android:layout_width="fill_parent"
-                            android:layout_height="wrap_content"
-                            android:drawableLeft="@drawable/profile1_icon"
-                            android:singleLine="true"
-                            android:textColor="#000"
-                            android:imeOptions="actionNext"
-                            android:maxLength="12"
-                            android:hint="आधार संख्या"
-                            android:inputType="number" />
-                    </android.support.design.widget.TextInputLayout>
-<!--                    <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner-->
-<!--                        android:id="@+id/sp_state"-->
-
-<!--                        android:layout_width="match_parent"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:hint="आप अभी किस राज्य में है ?"-->
-<!--                        android:layout_marginTop="16dp"-->
-<!--                        android:drawableLeft="@drawable/district"-->
-<!--                        android:textColorHint="#05ab9a"-->
-<!--                        app:met_floatingLabel="normal" />-->
-
-                    <LinearLayout
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:paddingLeft="10dp"
-                        android:paddingTop="8dp"
-                        android:paddingRight="10dp"
-                        android:paddingBottom="5dp">
-
-                        <TextView
-                            android:id="@+id/tv_curstate"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="आप अभी किस राज्य में है ?"
-                            android:textColor="#000000"
-                            android:textStyle="bold" />
-
-                        <Spinner
-                            android:id="@+id/sp_state"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="0.5"
-                            android:imeOptions="actionUnspecified"
-                            android:paddingRight="20dp"
-                            android:textAppearance="?android:textAppearanceSmall"
-                            android:textColor="#43D305" />
-
-
-
-                    </LinearLayout>
-
-                    <android.support.design.widget.TextInputLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-
-                        <EditText
-                            android:id="@+id/et_ben_location"
-                            android:layout_width="fill_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="16dp"
-                            android:singleLine="true"
-                            android:imeOptions="actionNext"
-                            android:maxLength="60"
-                            android:inputType="textMultiLine"
-                            android:maxLines="4"
-                            android:minLines="3"
-                            android:drawableLeft="@drawable/district"
-                            android:hint="आप अभी किस जगह पर है ?" />
-                    </android.support.design.widget.TextInputLayout>
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:weightSum="2"
-                        android:orientation="horizontal">
-                        <android.support.design.widget.TextInputLayout
-                            android:layout_width="match_parent"
-                            android:layout_weight="0.5"
-                            android:layout_height="wrap_content">
-
-                            <EditText
-                                android:id="@+id/et_Mobile_Number"
-                                android:layout_width="fill_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="16dp"
-                                android:singleLine="true"
-                                android:imeOptions="actionNext"
-                                android:maxLength="10"
-                                android:drawableLeft="@drawable/mobile"
-                                android:hint="मोबाइल नंबर"
-                                android:inputType="number" />
-                        </android.support.design.widget.TextInputLayout>
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_weight="1.5"
-                            android:textSize="15dp"
-                            android:id="@+id/tv_auth_mob"
-                            android:textStyle="bold"
-                            android:textColor="#E21E10"
-                            android:layout_gravity="center_vertical"
-                            android:layout_height="wrap_content"
-                            android:text="सत्यापित करे"/>
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:weightSum="2"
-                        android:id="@+id/tv_otp"
-                        android:orientation="horizontal">
-                        <android.support.design.widget.TextInputLayout
-                            android:layout_width="match_parent"
-                            android:layout_weight="1"
-                            android:layout_height="wrap_content">
-
-                            <EditText
-                                android:id="@+id/et_verify_otp_Number"
-                                android:layout_width="fill_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="16dp"
-                                android:singleLine="true"
-                                android:imeOptions="actionNext"
-                                android:maxLength="10"
-                                android:drawableLeft="@drawable/mobile"
-                                android:hint="OTP"
-                                android:inputType="phone" />
-                        </android.support.design.widget.TextInputLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:layout_gravity="center_vertical"
-                            android:weightSum="2"
-                            android:orientation="horizontal">
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:textSize="12dp"
-                                android:id="@+id/tv_verify_otp"
-                                android:textStyle="bold"
-                                android:textColor="#fff"
-                                android:background="#429500"
-                                android:layout_weight="1"
-                                android:layout_gravity="center_vertical"
-                                android:layout_height="35dp"
-                                android:text="OTP सत्यापित करे"/>
-
-                            <View
-                                android:layout_width="2dp"
-                                android:background="#000000"
-                                android:layout_height="1dp"/>
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:textSize="14dp"
-                                android:id="@+id/tv_resend_otp"
-                                android:textStyle="bold"
-                                android:layout_weight="1"
-                                android:background="#E75B65"
-                                android:textColor="#fff"
-                                android:layout_gravity="center_vertical"
-                                android:layout_height="35dp"
-                                android:text="पुनः OTP प्राप्त करे"/>
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-                    <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
-                        android:id="@+id/sp_account_ben_type"
-                        android:layout_width="match_parent"
-                        android:visibility="gone"
-                        android:layout_height="wrap_content"
-                        android:hint="बैंक खाता किनका है"
-                        android:layout_marginTop="16dp"
-                        android:drawableLeft="@drawable/district"
-                        android:textColorHint="#05ab9a"
-                        app:met_floatingLabel="normal" />
-
-                    <android.support.design.widget.TextInputLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-
-                        <EditText
-                            android:id="@+id/et_ifsc"
-                            android:layout_width="fill_parent"
-                            android:layout_height="wrap_content"
-                            android:drawableLeft="@drawable/district"
-                            android:singleLine="true"
-                            android:imeOptions="actionNext"
-                            android:hint="आई०एफ०एस०सी० [IFSC]"
-                            android:maxLength="11"
-                            android:inputType="textCapCharacters" />
-                    </android.support.design.widget.TextInputLayout>
-
-                    <android.support.design.widget.TextInputLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-
-                        <EditText
-                            android:id="@+id/et_account_number"
-                            android:layout_width="fill_parent"
-                            android:layout_height="wrap_content"
-                            android:drawableLeft="@drawable/district"
-                            android:singleLine="true"
-                            android:maxLength="18"
-                            android:imeOptions="actionNext"
-                            android:hint="बैंक खाता संख्या"
-                            android:inputType="numberPassword" />
-                    </android.support.design.widget.TextInputLayout>
-
-                    <android.support.design.widget.TextInputLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-
-                        <EditText
-                            android:id="@+id/et_confirm_account_number"
-                            android:layout_width="fill_parent"
-                            android:layout_height="wrap_content"
-                            android:drawableLeft="@drawable/district"
-                            android:singleLine="true"
-                            android:maxLength="18"
-                            android:imeOptions="actionNext"
-                            android:hint="बैंक खाता संख्या दुबारा डालें"
-                            android:inputType="number" />
-                    </android.support.design.widget.TextInputLayout>
-
-                    <android.support.design.widget.TextInputLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-
-                        <EditText
-                            android:id="@+id/et_Password"
-                            android:layout_width="fill_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="16dp"
-                            android:singleLine="true"
-                            android:visibility="gone"
-                            android:imeOptions="actionNext"
-                            android:maxLength="4"
-                            android:drawableLeft="@drawable/ic_lock_black"
-                            android:hint="चार अंकों का पासवर्ड"
-                            android:inputType="numberPassword" />
-                    </android.support.design.widget.TextInputLayout>
-
-                    <android.support.design.widget.TextInputLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-
-                        <EditText
-                            android:id="@+id/et_Confirm_Password"
-                            android:layout_width="fill_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="16dp"
-                            android:singleLine="true"
-                            android:visibility="gone"
-                            android:imeOptions="actionNext"
-                            android:maxLength="4"
-                            android:drawableLeft="@drawable/ic_lock_black"
-                            android:hint="पासवर्ड दूबारा डालें"
-                            android:inputType="number" />
-                    </android.support.design.widget.TextInputLayout>
-
-                    <!--                    <LinearLayout-->
-                    <!--                        android:layout_width="match_parent"-->
-                    <!--                        android:layout_height="wrap_content"-->
-                    <!--                        android:orientation="horizontal">-->
-                    <!--                        <TextView-->
-                    <!--                            android:layout_width="wrap_content"-->
-                    <!--                            android:layout_height="wrap_content"-->
-                    <!--                            android:padding="5dp"-->
-                    <!--                            android:textSize="17dp"-->
-                    <!--                            android:textStyle="bold"-->
-                    <!--                            android:layout_gravity="center_vertical"-->
-                    <!--                            android:textColor="#131212"-->
-                    <!--                            android:text="फोटो "/>-->
-                    <!--                        <TextView-->
-                    <!--                            android:layout_width="wrap_content"-->
-                    <!--                            android:layout_height="wrap_content"-->
-                    <!--                            android:textSize="20dp"-->
-                    <!--                            android:textColor="@color/holo_red_dark"-->
-                    <!--                            android:layout_gravity="center_vertical"-->
-                    <!--                            android:text="*"/>-->
-
-
-
-                    <!--                    </LinearLayout>-->
-                    <!--                    <LinearLayout-->
-                    <!--                        android:layout_width="fill_parent"-->
-                    <!--                        android:layout_height="wrap_content"-->
-                    <!--                        android:gravity="center"-->
-                    <!--                        android:orientation="vertical"-->
-                    <!--                        android:background="@drawable/background_style_new"-->
-                    <!--                        android:padding="0dp"-->
-                    <!--                        android:layout_marginBottom="10dp">-->
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:visibility="gone"
-                        android:layout_margin="2dp">
-                        <RelativeLayout
-                            android:id="@+id/rel_water_res1"
-                            android:layout_width="0dp"
-                            android:layout_weight=".5"
-                            android:layout_height="200dp"
-                            android:padding="1dp"
-                            android:visibility="visible"
-                            android:background="@drawable/rect"
-                            >
-                            <ImageView
-                                android:id="@+id/img_aadhar_front"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:scaleType="fitXY"/>
-
-                            <ImageView
-                                android:id="@+id/viewIMG3"
-                                android:layout_width="35dp"
-                                android:layout_height="35dp"
-
-                                android:src="@drawable/view"
-                                android:visibility="gone"/>
-                            <LinearLayout
-                                android:id="@+id/take_pic_water_res2"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_centerInParent="true"
-                                android:orientation="vertical">
-
-                                <ImageView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center_horizontal"
-                                    android:src="@drawable/ic_action_photo"
-                                    android:id="@+id/imageView1" />
-                                <LinearLayout
-                                    android:id="@+id/take_pic_anganbari1111"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_centerInParent="true"
-                                    android:orientation="horizontal">
-
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:padding="5dp"
-                                        android:textSize="12dp"
-                                        android:layout_gravity="center_vertical"
-                                        android:text="आधार कार्ड के प्रथम पृष्ठ का फोटो ले"/>
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:textSize="20dp"
-                                        android:visibility="gone"
-                                        android:layout_marginTop="10dp"
-                                        android:textColor="@color/holo_red_dark"
-                                        android:layout_gravity="center_vertical"
-                                        android:text="*"/>
-                                </LinearLayout>
-                            </LinearLayout>
-                        </RelativeLayout>
-                        <View
-                            android:layout_width="0dp"
-                            android:layout_weight=".005"
-                            android:layout_height="200dp"/>
-                        <RelativeLayout
-                            android:id="@+id/rel_aadhar_back"
-                            android:layout_width="0dp"
-                            android:layout_weight=".5"
-                            android:layout_height="200dp"
-                            android:padding="1dp"
-                            android:background="@drawable/rect"
-                            >
-                            <ImageView
-                                android:id="@+id/img_aadhar_back"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:scaleType="fitXY"/>
-
-                            <ImageView
-                                android:id="@+id/viewIMG4"
-                                android:layout_width="35dp"
-                                android:layout_height="35dp"
-
-                                android:src="@drawable/view"
-                                android:visibility="gone"/>
-
-                            <LinearLayout
-                                android:id="@+id/take_pic_anganbari12"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_centerInParent="true"
-                                android:orientation="vertical">
-
-                                <ImageView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center_horizontal"
-                                    android:src="@drawable/ic_action_photo"/>
-                                <LinearLayout
-                                    android:id="@+id/take_pic_anganbari13"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_centerInParent="true"
-                                    android:orientation="horizontal">
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:padding="5dp"
-                                        android:textSize="11dp"
-                                        android:layout_gravity="center_vertical"
-                                        android:text="आधार कार्ड के पीछे का फोटो ले"/>
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:textSize="20dp"
-                                        android:visibility="gone"
-                                        android:layout_marginTop="10dp"
-                                        android:textColor="@color/holo_red_dark"
-                                        android:layout_gravity="center_vertical"
-                                        android:text="*"/>
-                                </LinearLayout>
-                            </LinearLayout>
-                        </RelativeLayout>
-
-
-                    </LinearLayout>
-
-
-
-                    //-------------------------------------------
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="2dp">
-                        <RelativeLayout
-                            android:id="@+id/rel_water_res"
-                            android:layout_width="0dp"
-                            android:layout_weight=".5"
-                            android:layout_height="200dp"
-                            android:padding="1dp"
-                            android:visibility="visible"
-                            android:background="@drawable/rect"
-                            >
-                            <ImageView
-                                android:id="@+id/img_pic2"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:scaleType="fitXY"/>
-
-                            <!--                                <ImageView-->
-                            <!--                                    android:id="@+id/viewIMG2"-->
-                            <!--                                    android:layout_width="35dp"-->
-                            <!--                                    android:layout_height="35dp"-->
-                            <!--                                    android:layout_alignTop="@+id/img_pic2"-->
-                            <!--                                    android:layout_alignRight="@+id/img_pic2"-->
-                            <!--                                    android:onClick="onClick_ViewImg1"-->
-                            <!--                                    android:src="@drawable/view"-->
-                            <!--                                    android:visibility="gone"/>-->
-                            <LinearLayout
-                                android:id="@+id/take_pic_water_res"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_centerInParent="true"
-                                android:orientation="vertical">
-
-                                <ImageView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center_horizontal"
-                                    android:src="@drawable/ic_action_photo"
-                                    android:id="@+id/imageView" />
-                                <LinearLayout
-                                    android:id="@+id/take_pic_anganbari111"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_centerInParent="true"
-                                    android:orientation="horizontal">
-
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:padding="5dp"
-                                        android:textColor="@color/holo_red_dark"
-                                        android:layout_gravity="center_vertical"
-                                        android:textSize="15dp"
-                                        android:text="ऐसा आधार कार्ड का फोटो ले जिससे केवल आधार कार्ड ही स्पष्ट दिखे तथा आधार कार्ड का सीधा फोटो होना चाहिए |"/>
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:textSize="20dp"
-                                        android:visibility="gone"
-                                        android:textColor="@color/holo_red_dark"
-                                        android:layout_gravity="center_vertical"
-                                        android:text="*"/>
-                                </LinearLayout>
-                            </LinearLayout>
-                        </RelativeLayout>
-                        <View
-                            android:layout_width="3dp"
-                            android:layout_weight=".005"
-                            android:layout_height="200dp"/>
-                        <RelativeLayout
-                            android:id="@+id/rel_selfie"
-                            android:layout_width="0dp"
-                            android:layout_weight=".5"
-                            android:layout_height="200dp"
-                            android:padding="1dp"
-                            android:background="@drawable/rect"
-                            >
-                            <ImageView
-                                android:id="@+id/img_pic1"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:scaleType="fitXY"/>
-
-                            <!--                                <ImageView-->
-                            <!--                                    android:id="@+id/viewIMG1"-->
-                            <!--                                    android:layout_width="35dp"-->
-                            <!--                                    android:layout_height="35dp"-->
-                            <!--                                    android:layout_alignTop="@+id/img_pic1"-->
-                            <!--                                    android:layout_alignRight="@+id/img_pic1"-->
-                            <!--                                    android:onClick="onClick_ViewImg"-->
-                            <!--                                    android:src="@drawable/view"-->
-                            <!--                                    android:visibility="gone"/>-->
-
-                            <LinearLayout
-                                android:id="@+id/take_pic_anganbari"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_centerInParent="true"
-                                android:orientation="vertical">
-
-                                <ImageView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center_horizontal"
-                                    android:src="@drawable/ic_action_photo"/>
-                                <LinearLayout
-                                    android:id="@+id/take_pic_anganbari1"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_centerInParent="true"
-                                    android:orientation="horizontal">
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:padding="5dp"
-                                        android:textColor="@color/holo_red_dark"
-                                        android:textSize="15dp"
-                                        android:layout_gravity="center_vertical"
-                                        android:text="अपना चेहरा का फोटो नजदीक से ले जिससे आपका केवल चेहरा ही स्पष्ट दिखे |"/>
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:textSize="20dp"
-                                        android:visibility="gone"
-                                        android:textColor="@color/holo_red_dark"
-                                        android:layout_gravity="center_vertical"
-                                        android:text="*"/>
-                                </LinearLayout>
-                            </LinearLayout>
-                        </RelativeLayout>
-
-
-                    </LinearLayout>
-                    <!--                    </LinearLayout>-->
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:padding="3dp"
-                        android:orientation="horizontal"
-                        android:weightSum="2">
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:id="@+id/viewIMG2"
-                            android:textAlignment="center"
-                            android:background="@drawable/buttonbackshape"
-                            android:visibility="gone"
-                            android:text="अपना आधार कार्ड देखे"
-                            android:onClick="onClick_ViewImg1"
-                            android:textStyle="bold"
-                            android:textColor="#FAF8F8"
-                            >
-
-                        </TextView>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:id="@+id/viewIMG1"
-                            android:background="@drawable/buttonbackshape"
-                            android:onClick="onClick_ViewImg"
-                            android:textAlignment="center"
-                            android:visibility="gone"
-                            android:layout_marginLeft="5dp"
-                            android:text="अपना सेल्फी देखिये"
-                            android:textStyle="bold"
-                            android:textColor="#FCF9F9"
-                            >
-
-                        </TextView>
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:padding="3dp"
-                        android:orientation="horizontal"
-                        android:weightSum="2">
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:id="@+id/tv_photo"
-                            android:textAlignment="center"
-                            android:visibility="gone"
-                            android:text="* दुबारा फोटो लेने के लिए फोटो पे क्लिक करे *"
-                            android:textStyle="bold"
-                            android:textSize="15dp"
-                            android:textColor="#26338A"
-                            >
-
-                        </TextView>
-
-
-                    </LinearLayout>
-
-                    <Button
-                        android:onClick="onCompleteRegistration"
-                        android:id="@+id/btn_reg_new"
-                        android:layout_width="fill_parent"
-                        android:layout_height="40dp"
-                        android:layout_margin="20dp"
-                        android:background="#522f54"
-                        android:text="रजिस्ट्रेशन करें"
-                        android:textAllCaps="false"
-                        android:textColor="#fff"
-                        android:textSize="18sp" />
                 </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="आप अभी किस जगह पर है ?"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"/>
+
+                <EditText
+                    android:layout_marginTop="4dp"
+                    android:id="@+id/et_ben_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/textboxshape"
+                    android:hint="आप अभी किस जगह पर है"
+                    android:padding="10dp"
+                    android:inputType="textMultiLine"
+                    android:gravity="top|left"
+                    android:lines="8"
+                    android:minLines="3"
+                    android:textColor="#222222"
+                    android:focusableInTouchMode="true"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_toLeftOf="@+id/tv_auth_mob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="मोबाइल नंबर"
+                        android:textColor="@color/black"
+                        android:textSize="13sp"/>
+
+                    <EditText
+                        android:layout_marginTop="4dp"
+                        android:id="@+id/et_Mobile_Number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/textboxshape"
+                        android:hint="लाभार्थी का नाम"
+                        android:padding="10dp"
+                        android:inputType="textCapWords"
+                        android:singleLine="true"
+                        android:textColor="#222222"
+                        android:focusableInTouchMode="true"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:textSize="13dp"
+                    android:id="@+id/tv_auth_mob"
+                    android:textStyle="bold"
+                    android:textColor="#E21E10"
+                    android:text="सत्यापित करे"
+                    android:layout_marginTop="28dp"
+                    android:layout_marginLeft="4dp"/>
             </RelativeLayout>
 
+            <LinearLayout
+                android:layout_marginTop="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:id="@+id/tv_otp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ओटीपी"
+                        android:textColor="@color/black"
+                        android:textSize="13sp"/>
+
+                    <EditText
+                        android:layout_marginTop="4dp"
+                        android:id="@+id/et_verify_otp_Number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/textboxshape"
+                        android:hint="ओटीपी"
+                        android:padding="10dp"
+                        android:inputType="number"
+                        android:singleLine="true"
+                        android:textColor="#222222"
+                        android:focusableInTouchMode="true"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+<!--                <android.support.design.widget.TextInputLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:layout_height="wrap_content">-->
+
+<!--                    <EditText-->
+<!--                        android:id="@+id/et_verify_otp_Number"-->
+<!--                        android:layout_width="fill_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginTop="16dp"-->
+<!--                        android:singleLine="true"-->
+<!--                        android:imeOptions="actionNext"-->
+<!--                        android:maxLength="10"-->
+<!--                        android:drawableLeft="@drawable/mobile"-->
+<!--                        android:hint="OTP"-->
+<!--                        android:inputType="phone" />-->
+<!--                </android.support.design.widget.TextInputLayout>-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="18dp"
+                    android:weightSum="2"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:padding="4dp"
+                        android:layout_margin="4dp"
+                        android:layout_width="match_parent"
+                        android:textSize="12dp"
+                        android:id="@+id/tv_verify_otp"
+                        android:textStyle="bold"
+                        android:textColor="#fff"
+                        android:background="#429500"
+                        android:layout_weight="1"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="35dp"
+                        android:text="OTP सत्यापित करे"/>
+
+
+                    <TextView
+                        android:padding="4dp"
+                        android:layout_margin="4dp"
+                        android:layout_width="match_parent"
+                        android:textSize="12dp"
+                        android:id="@+id/tv_resend_otp"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        android:background="#E75B65"
+                        android:textColor="#fff"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="35dp"
+                        android:text="पुनः OTP प्राप्त करे"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+                android:id="@+id/sp_account_ben_type"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="wrap_content"
+                android:hint="बैंक खाता किनका है"
+                android:layout_marginTop="16dp"
+                android:drawableLeft="@drawable/district"
+                android:textColorHint="#05ab9a"
+                app:met_floatingLabel="normal" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/et_ifsc"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/district"
+                    android:singleLine="true"
+                    android:imeOptions="actionNext"
+                    android:hint="आई०एफ०एस०सी० [IFSC]"
+                    android:maxLength="11"
+                    android:inputType="textCapCharacters" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/et_account_number"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/district"
+                    android:singleLine="true"
+                    android:maxLength="18"
+                    android:imeOptions="actionNext"
+                    android:hint="बैंक खाता संख्या"
+                    android:inputType="numberPassword" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/et_confirm_account_number"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/district"
+                    android:singleLine="true"
+                    android:maxLength="18"
+                    android:imeOptions="actionNext"
+                    android:hint="बैंक खाता संख्या दुबारा डालें"
+                    android:inputType="number" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/et_Password"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:singleLine="true"
+                    android:visibility="gone"
+                    android:imeOptions="actionNext"
+                    android:maxLength="4"
+                    android:drawableLeft="@drawable/ic_lock_black"
+                    android:hint="चार अंकों का पासवर्ड"
+                    android:inputType="numberPassword" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/et_Confirm_Password"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:singleLine="true"
+                    android:visibility="gone"
+                    android:imeOptions="actionNext"
+                    android:maxLength="4"
+                    android:drawableLeft="@drawable/ic_lock_black"
+                    android:hint="पासवर्ड दूबारा डालें"
+                    android:inputType="number" />
+            </android.support.design.widget.TextInputLayout>
+
+            <!--                    <LinearLayout-->
+            <!--                        android:layout_width="match_parent"-->
+            <!--                        android:layout_height="wrap_content"-->
+            <!--                        android:orientation="horizontal">-->
+            <!--                        <TextView-->
+            <!--                            android:layout_width="wrap_content"-->
+            <!--                            android:layout_height="wrap_content"-->
+            <!--                            android:padding="5dp"-->
+            <!--                            android:textSize="17dp"-->
+            <!--                            android:textStyle="bold"-->
+            <!--                            android:layout_gravity="center_vertical"-->
+            <!--                            android:textColor="#131212"-->
+            <!--                            android:text="फोटो "/>-->
+            <!--                        <TextView-->
+            <!--                            android:layout_width="wrap_content"-->
+            <!--                            android:layout_height="wrap_content"-->
+            <!--                            android:textSize="20dp"-->
+            <!--                            android:textColor="@color/holo_red_dark"-->
+            <!--                            android:layout_gravity="center_vertical"-->
+            <!--                            android:text="*"/>-->
 
 
 
-            <ImageView
-                android:id="@+id/user_profile_photo"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:elevation="4dp"
-                android:src="@drawable/indian_gov"
-                android:layout_alignTop="@+id/login_title"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="32dp" />
-        </RelativeLayout>
+            <!--                    </LinearLayout>-->
+            <!--                    <LinearLayout-->
+            <!--                        android:layout_width="fill_parent"-->
+            <!--                        android:layout_height="wrap_content"-->
+            <!--                        android:gravity="center"-->
+            <!--                        android:orientation="vertical"-->
+            <!--                        android:background="@drawable/background_style_new"-->
+            <!--                        android:padding="0dp"-->
+            <!--                        android:layout_marginBottom="10dp">-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_margin="2dp">
+                <RelativeLayout
+                    android:id="@+id/rel_water_res1"
+                    android:layout_width="0dp"
+                    android:layout_weight=".5"
+                    android:layout_height="200dp"
+                    android:padding="1dp"
+                    android:visibility="visible"
+                    android:background="@drawable/rect"
+                    >
+                    <ImageView
+                        android:id="@+id/img_aadhar_front"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"/>
+
+                    <ImageView
+                        android:id="@+id/viewIMG3"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+
+                        android:src="@drawable/view"
+                        android:visibility="gone"/>
+                    <LinearLayout
+                        android:id="@+id/take_pic_water_res2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:src="@drawable/ic_action_photo"
+                            android:id="@+id/imageView1" />
+                        <LinearLayout
+                            android:id="@+id/take_pic_anganbari1111"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp"
+                                android:textSize="12dp"
+                                android:layout_gravity="center_vertical"
+                                android:text="आधार कार्ड के प्रथम पृष्ठ का फोटो ले"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="20dp"
+                                android:visibility="gone"
+                                android:layout_marginTop="10dp"
+                                android:textColor="@color/holo_red_dark"
+                                android:layout_gravity="center_vertical"
+                                android:text="*"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+                <View
+                    android:layout_width="0dp"
+                    android:layout_weight=".005"
+                    android:layout_height="200dp"/>
+                <RelativeLayout
+                    android:id="@+id/rel_aadhar_back"
+                    android:layout_width="0dp"
+                    android:layout_weight=".5"
+                    android:layout_height="200dp"
+                    android:padding="1dp"
+                    android:background="@drawable/rect"
+                    >
+                    <ImageView
+                        android:id="@+id/img_aadhar_back"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"/>
+
+                    <ImageView
+                        android:id="@+id/viewIMG4"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+
+                        android:src="@drawable/view"
+                        android:visibility="gone"/>
+
+                    <LinearLayout
+                        android:id="@+id/take_pic_anganbari12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:src="@drawable/ic_action_photo"/>
+                        <LinearLayout
+                            android:id="@+id/take_pic_anganbari13"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp"
+                                android:textSize="11dp"
+                                android:layout_gravity="center_vertical"
+                                android:text="आधार कार्ड के पीछे का फोटो ले"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="20dp"
+                                android:visibility="gone"
+                                android:layout_marginTop="10dp"
+                                android:textColor="@color/holo_red_dark"
+                                android:layout_gravity="center_vertical"
+                                android:text="*"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+
+            //-------------------------------------------
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp">
+                <RelativeLayout
+                    android:id="@+id/rel_water_res"
+                    android:layout_width="0dp"
+                    android:layout_weight=".5"
+                    android:layout_height="200dp"
+                    android:padding="1dp"
+                    android:visibility="visible"
+                    android:background="@drawable/rect"
+                    >
+                    <ImageView
+                        android:id="@+id/img_pic2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"/>
+
+                    <!--                                <ImageView-->
+                    <!--                                    android:id="@+id/viewIMG2"-->
+                    <!--                                    android:layout_width="35dp"-->
+                    <!--                                    android:layout_height="35dp"-->
+                    <!--                                    android:layout_alignTop="@+id/img_pic2"-->
+                    <!--                                    android:layout_alignRight="@+id/img_pic2"-->
+                    <!--                                    android:onClick="onClick_ViewImg1"-->
+                    <!--                                    android:src="@drawable/view"-->
+                    <!--                                    android:visibility="gone"/>-->
+                    <LinearLayout
+                        android:id="@+id/take_pic_water_res"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:src="@drawable/ic_action_photo"
+                            android:id="@+id/imageView" />
+                        <LinearLayout
+                            android:id="@+id/take_pic_anganbari111"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp"
+                                android:textColor="@color/holo_red_dark"
+                                android:layout_gravity="center_vertical"
+                                android:textSize="15dp"
+                                android:text="ऐसा आधार कार्ड का फोटो ले जिससे केवल आधार कार्ड ही स्पष्ट दिखे तथा आधार कार्ड का सीधा फोटो होना चाहिए |"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="20dp"
+                                android:visibility="gone"
+                                android:textColor="@color/holo_red_dark"
+                                android:layout_gravity="center_vertical"
+                                android:text="*"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+                <View
+                    android:layout_width="3dp"
+                    android:layout_weight=".005"
+                    android:layout_height="200dp"/>
+                <RelativeLayout
+                    android:id="@+id/rel_selfie"
+                    android:layout_width="0dp"
+                    android:layout_weight=".5"
+                    android:layout_height="200dp"
+                    android:padding="1dp"
+                    android:background="@drawable/rect"
+                    >
+                    <ImageView
+                        android:id="@+id/img_pic1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"/>
+
+                    <!--                                <ImageView-->
+                    <!--                                    android:id="@+id/viewIMG1"-->
+                    <!--                                    android:layout_width="35dp"-->
+                    <!--                                    android:layout_height="35dp"-->
+                    <!--                                    android:layout_alignTop="@+id/img_pic1"-->
+                    <!--                                    android:layout_alignRight="@+id/img_pic1"-->
+                    <!--                                    android:onClick="onClick_ViewImg"-->
+                    <!--                                    android:src="@drawable/view"-->
+                    <!--                                    android:visibility="gone"/>-->
+
+                    <LinearLayout
+                        android:id="@+id/take_pic_anganbari"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:src="@drawable/ic_action_photo"/>
+                        <LinearLayout
+                            android:id="@+id/take_pic_anganbari1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp"
+                                android:textColor="@color/holo_red_dark"
+                                android:textSize="15dp"
+                                android:layout_gravity="center_vertical"
+                                android:text="अपना चेहरा का फोटो नजदीक से ले जिससे आपका केवल चेहरा ही स्पष्ट दिखे |"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="20dp"
+                                android:visibility="gone"
+                                android:textColor="@color/holo_red_dark"
+                                android:layout_gravity="center_vertical"
+                                android:text="*"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+
+
+            </LinearLayout>
+            <!--                    </LinearLayout>-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/viewIMG2"
+                    android:textAlignment="center"
+                    android:background="@drawable/buttonbackshape"
+                    android:visibility="gone"
+                    android:text="अपना आधार कार्ड देखे"
+                    android:onClick="onClick_ViewImg1"
+                    android:textStyle="bold"
+                    android:textColor="#FAF8F8"
+                    >
+
+                </TextView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/viewIMG1"
+                    android:background="@drawable/buttonbackshape"
+                    android:onClick="onClick_ViewImg"
+                    android:textAlignment="center"
+                    android:visibility="gone"
+                    android:layout_marginLeft="5dp"
+                    android:text="अपना सेल्फी देखिये"
+                    android:textStyle="bold"
+                    android:textColor="#FCF9F9"
+                    >
+
+                </TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/tv_photo"
+                    android:textAlignment="center"
+                    android:visibility="gone"
+                    android:text="* दुबारा फोटो लेने के लिए फोटो पे क्लिक करे *"
+                    android:textStyle="bold"
+                    android:textSize="15dp"
+                    android:textColor="#26338A"
+                    >
+
+                </TextView>
+
+
+            </LinearLayout>
+
+            <Button
+                android:onClick="onCompleteRegistration"
+                android:id="@+id/btn_reg_new"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_margin="20dp"
+                android:background="#522f54"
+                android:text="रजिस्ट्रेशन करें"
+                android:textAllCaps="false"
+                android:textColor="#fff"
+                android:textSize="18sp" />
+        </LinearLayout>
     </ScrollView>
 
     <RelativeLayout
-        android:visibility="visible"
+        android:visibility="gone"
         android:id="@+id/rl_declaration"
         android:layout_below="@+id/header"
 
@@ -774,7 +829,7 @@
 
                 <LinearLayout
                     android:padding="12dp"
-                    android:visibility="gone"
+                    android:visibility="visible"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"

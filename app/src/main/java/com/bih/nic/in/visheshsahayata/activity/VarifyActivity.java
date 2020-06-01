@@ -59,6 +59,7 @@ import java.util.regex.Pattern;
 public class VarifyActivity extends AppCompatActivity {
     //implements LocationListener
     EditText et_father_Name_new,et_father_aadhar_number_new;
+    TextView tv_dist_inst,tv_blck_inst;
     Button btn_verify;
     String latitude="",longitud="";
     ProgressBar pbar;
@@ -217,6 +218,7 @@ public class VarifyActivity extends AppCompatActivity {
                     StateName = district.getStateName();
 
                     sync_dist.setVisibility(View.VISIBLE);
+                    tv_dist_inst.setVisibility(View.VISIBLE);
                     DistrictList = localDBHelper.getDistrictLocal(StateCode);
 
                     if (DistrictList.size() <= 0) {
@@ -253,6 +255,7 @@ public class VarifyActivity extends AppCompatActivity {
                     DistCode = district.getDistrictCode();
                     DistName = district.getDistrictName();
                     sync_blk.setVisibility(View.VISIBLE);
+                    tv_blck_inst.setVisibility(View.VISIBLE);
                     sp_block.setSelection(0);
                     sp_panchayat.setSelection(0);
 
@@ -1669,6 +1672,8 @@ public class VarifyActivity extends AppCompatActivity {
         et_husband_Name.addTextChangedListener(inputTextWatcher2);
         et_wife_Name.addTextChangedListener(inputTextWatcher3);
         login_title=(TextView) findViewById(R.id.login_title);
+        tv_dist_inst=(TextView) findViewById(R.id.tv_dist_inst);
+        tv_blck_inst=(TextView) findViewById(R.id.tv_blck_inst);
 
         sp_aadhar_num=(MaterialBetterSpinner)findViewById(R.id.sp_aadhar_num);
         sp_aadhar_num.setVisibility(View.GONE);
@@ -1688,6 +1693,8 @@ public class VarifyActivity extends AppCompatActivity {
         et_father_Name_new.setEnabled(false);
         sync_dist.setVisibility(View.GONE);
         sync_blk.setVisibility(View.GONE);
+        tv_dist_inst.setVisibility(View.GONE);
+        tv_blck_inst.setVisibility(View.GONE);
 
 
 

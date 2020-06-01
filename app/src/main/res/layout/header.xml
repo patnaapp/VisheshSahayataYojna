@@ -3,34 +3,33 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="?attr/actionBarSize"
-    android:background="#1D619A">
+    android:background="@color/colorPrimary">
 
 
     <ImageView
+        android:layout_centerVertical="true"
+        android:padding="4dp"
         android:id="@+id/sample_image"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_alignParentRight="true"
-        android:layout_marginRight="15dp"
-        android:layout_marginTop="2.5dp"
-        android:layout_centerVertical="true"
-        android:adjustViewBounds="true"
-        android:scaleType="fitXY"
-        android:src="@drawable/digital1"/>
+        android:layout_marginRight="12dp"
+        android:src="@drawable/digital1"
+        android:background="@drawable/circular_shape_white"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="मुख्यमंत्री विशेष सहायता योजना"
+        android:text="विशेष सहायता योजना"
         android:gravity="center_horizontal"
-        android:textSize="15sp"
+        android:textSize="17sp"
         android:textStyle="bold"
         android:layout_centerInParent="true"
         android:textColor="#FFFFFF"
-
         />
 
     <ImageView
+        android:padding="6dp"
         android:id="@+id/imageView1"
         android:layout_width="40dp"
         android:layout_height="40dp"
@@ -38,7 +37,8 @@
         android:layout_centerVertical="true"
         android:layout_marginTop="5dp"
         android:scaleType="fitXY"
-        android:layout_marginLeft="20dp"
-        android:src="@drawable/indian_gov" />
+        android:layout_marginLeft="12dp"
+        android:src="@drawable/indian_gov"
+        android:background="@drawable/circular_shape_white"/>
 
 </RelativeLayout>

@@ -22,7 +22,7 @@ public class PhotoViewer extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_photo_viewer);
 
-        showinstructions();
+        //showinstructions();
 
         btn_ok = (Button) findViewById(R.id.btn_confirm);
         btn_status = (Button) findViewById(R.id.btn_status);
